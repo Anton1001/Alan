@@ -1,0 +1,12 @@
+library("ggplot2")
+x<-seq(0.7,length=50)
+y<-2.5*x+5*runif(100)
+df<-data.frame(x,y)
+ggplot(df,aes(x=x,y=y))+
+  geom_point(data=df,colour = 'red', size = 3)
+r_line<-lm(y ~x, df)
+dc<-data.frame(a=coef(r_line)[1],b=coef(r_line)[2])
+ggplot(df,aes(x=x,y=y))+
+  geom_point(data=df,colour = 'red', size = 3)+
+  geom_abline(data=dc,aes(intercept=a, slope=b), colour='blue')
+
