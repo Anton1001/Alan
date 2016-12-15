@@ -1,0 +1,20 @@
+{
+    "collab_server" : "",
+    "contents" : "library(\"ggplot2\")\nx<-seq(0.7,length=50)\ny<-2.5*x+5*runif(100)\ndf<-data.frame(x,y)\nggplot(df,aes(x=x,y=y))+\n  geom_point(data=df,colour = 'red', size = 3)\nr_line<-lm(y ~x, df)\ndc<-data.frame(a=coef(r_line)[1],b=coef(r_line)[2])\nggplot(df,aes(x=x,y=y))+\n  geom_point(data=df,colour = 'red', size = 3)+\n  geom_abline(data=dc,aes(intercept=a, slope=b), colour='blue')\n\n",
+    "created" : 1481796091438.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "2371330781",
+    "id" : "FA618362",
+    "lastKnownWriteTime" : 1481795970,
+    "last_content_update" : 1481795970,
+    "path" : "~/GitHub/Alan/play_lm-ggplot.R",
+    "project_path" : "play_lm-ggplot.R",
+    "properties" : {
+    },
+    "relative_order" : 1,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}
