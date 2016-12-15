@@ -1,0 +1,22 @@
+{
+    "collab_server" : "",
+    "contents" : "---\ntitle: \"GitHub\"\noutput: pdf_document\n---\n\n```{r setup, include=FALSE}\nknitr::opts_chunk$set(echo = TRUE)\nlibrary(\"ggplot2\")\n```\n\n## R Markdown\n\nHow to manage files on github? with rmarkdown...\n\n```{r}\nx<-seq(0.7,length=50)\ny<-2.5*x+5*runif(100)\ndf<-data.frame(x,y)\nggplot(df,aes(x=x,y=y))+\ngeom_point(data=df,colour = 'red', size = 3)\nr_line<-lm(y ~x, df)\ndc<-data.frame(a=coef(r_line)[1],b=coef(r_line)[2])\nggplot(df,aes(x=x,y=y))+\ngeom_point(data=df,colour = 'red', size = 3)+\ngeom_abline(data=dc,aes(intercept=a, slope=b), colour='blue')\n```\n\n\n",
+    "created" : 1481796137700.000,
+    "dirty" : true,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "3821973346",
+    "id" : "B9CA9152",
+    "lastKnownWriteTime" : 1481796338,
+    "last_content_update" : 1481796409461,
+    "path" : "~/GitHub/Alan/markdown-github-test.Rmd",
+    "project_path" : "markdown-github-test.Rmd",
+    "properties" : {
+        "last_setup_crc32" : "9E98F8DC6a925105",
+        "tempName" : "Untitled1"
+    },
+    "relative_order" : 2,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_markdown"
+}

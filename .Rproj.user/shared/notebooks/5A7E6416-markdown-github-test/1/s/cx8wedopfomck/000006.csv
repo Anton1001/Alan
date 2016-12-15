@@ -1,0 +1,5 @@
+"0","r_line<-lm(y ~x, df)"
+"0","dc<-data.frame(a=coef(r_line)[1],b=coef(r_line)[2])"
+"0","ggplot(df,aes(x=x,y=y))+"
+"0","geom_point(data=df,colour = 'red', size = 3)+"
+"0","geom_abline(data=dc,aes(intercept=a, slope=b), colour='blue')"

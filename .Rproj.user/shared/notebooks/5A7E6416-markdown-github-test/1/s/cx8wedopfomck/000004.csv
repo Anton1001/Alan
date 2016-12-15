@@ -1,0 +1,5 @@
+"0","x<-seq(0.7,length=50)"
+"0","y<-2.5*x+5*runif(100)"
+"0","df<-data.frame(x,y)"
+"0","ggplot(df,aes(x=x,y=y))+"
+"0","geom_point(data=df,colour = 'red', size = 3)"
